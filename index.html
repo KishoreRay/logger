@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Division App</title>
+</head>
+<body>
+    <h1>Division Operation</h1>
+    <form method="post" action="/divide">
+        <label for="numerator">Numerator:</label>
+        <input type="text" id="numerator" name="numerator" required><br><br>
+        
+        <label for="denominator">Denominator:</label>
+        <input type="text" id="denominator" name="denominator" required><br><br>
+
+        <input type="submit" value="Divide">
+    </form>
+
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% elif error %}
+        <h2 style="color:red;">Error: {{ error }}</h2>
+    {% endif %}
+</body>
+</html>
